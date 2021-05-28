@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>tensorflow gui</title>
+
+    <!--Bootsrap 4 CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- initial css file -->
+    <link rel="stylesheet" href="index.css">
+    <!-- css of login module -->
+    <link rel="stylesheet" href="login/login.css">
+    <!-- css of user module -->
+    <link rel="stylesheet" href="user/user.css">
+    <!-- css of draw module -->
+    <link rel="stylesheet" href="nodeeditor/nodeeditor.css">
+    <link rel="stylesheet" href="codeeditor/codeeditor.css">
+    <!-- css of project module -->
+    <link rel="stylesheet" href="project/project.css">
+    <!-- css of training module -->
+    <link rel="stylesheet" href="training/training.css">
+    <link rel="stylesheet" href="settings/settings.css">
+
+    <link rel="stylesheet" data-name="vs/editor/editor.main" href="../node_modules/monaco-editor/min/vs/editor/editor.main.css">
+    
+</head>
+
+<body>
+
+    <div id="loading" style="color:black">
+        <p>Loading. Please Wait...</p>
+        <img src="../raw/loading.gif" alt="">
+    </div>
+    <div id="main-content"></div>
+
+    <script>
+        // load jquery and jquery-ui
+        window.$ = window.jQuery = require('jquery');
+        require('jquery-ui-dist/jquery-ui');
+
+        // show loading screen on requests
+        $('#loading').hide();
+        $(document).ajaxStart(function () {
+            $('#loading').show();
+        }).ajaxStop(function () {
+            $('#loading').hide();
+        });
+    </script>
+    <!-- load bootstrap 4.0.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        const path = require('path');
+        const print = console.log;
+        const swal = require('sweetalert');
+        const fs = require('fs');
+        const globaljs = require('../lib/global');
+        const childprocess = require('child_process');
+
+        let projects_path = path.join(process.cwd(), "/../testing/Projects/");
+
+        function loadPage(page_path, onComplete) {
+            $("#main-content").html('');
+            $("#main-content").load(page_path, onComplete);
+        }
+
+        require("./index.js");
+    </script>
+
+</body>
+
+</html>

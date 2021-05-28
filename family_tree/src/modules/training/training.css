@@ -1,0 +1,39 @@
+#training-main{
+    height: 100%;
+    border: 0px;
+}
+
+.controls{
+    position: relative;
+    bottom: 12%;
+    background-color:rgba(189, 186, 186, 0.6);
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 6px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #aaaaaa;
+}
+.controls button{
+    float: right;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #888888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #888888;
+}
+
+#tensorboard{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+}

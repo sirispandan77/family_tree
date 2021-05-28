@@ -1,0 +1,105 @@
+
+<header id="draw-header">
+
+    <div id="left-draw-header">
+        <div id="draw-details">
+            <p class="h6 p-0 m-0" id="project-name">First Project</p>
+            <p class="p-0 m-0" id="project-details">project details</p>
+        </div>
+    </div>
+
+    <p class="draw-title">FAMILY TREE</p>
+
+    <div id="right-draw-header">
+        <div>
+            <button id="saveProject" class="btn btn-light p-2 btn-responsive">Save</button>
+        </div>
+    </div>
+</header>
+
+<div class="draw-content">
+    <div id="draw-sidebar-left">
+        <div id="draw-layers">
+            <p class="h5 text-success">RELATIONS</p>
+            <nav class="navbar navbar-inverse">
+                <ul class="navbar-nav">
+                    <li class="accordion">
+                        <!---<a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
+                            style="color:#555555; text-decoration: none;"></p>
+                            Others</a>--->
+                        <ul  id="pageSubmenu6">
+                            <!--<li>InputLayer</li>-->
+                            
+                            <li>FATHER</li>
+                            <li>MOTHER</li>
+                            <li>SISTER</li>
+                            <li>BROTHER</li>
+                            <li>HUSBAND</li>
+                            <li>WIFE</li>
+                            <li>SON</li>
+                            <li>DAUGHTER</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="draw-layers">
+            <p class="h5 text-success">SEARCH RELATION</p>
+            <br>
+            <center><label >Person 1: </label></center>
+            <center><select id="p1-dropdown" name="p1" ></select> </center> 
+                
+                <center><label >Person 2: </label></center>
+                <center><select id="p2-dropdown" name="p2" ></select>  </center>
+                <br>
+                <center><button id="searchbutton" style="background-color: rgb(163, 163, 199);" type="button" >  Search  </button></center>
+                <br><div id="relation"> <center><p id ="space"> </p></center>     </div>
+            
+        </div>
+        
+
+    </div>
+
+    <div id="draw-sidebar-right">
+        <!---<h6 id="selectedlayer" style="margin-top:4px;">No Layer</h6>--->
+        <!---<input type="text" id="selectedlayer"  style="margin-top:4px;" placeholder="enter person name"><br>--->
+        <div id="draw-arugments">
+            <p class="h5 text-success text-center">Personal Details</p>
+            <nav class="navbar navbar-inverse">
+                <form id="right-sidebar-form">
+                </form>
+            </nav>
+        </div>
+
+        <div id="draw-outputs-rights">
+            <!---<p class="h5 text-success text-center">Private Details</p>--->
+            <nav class="navbar navbar-inverse">
+                <form id="right-sidebar-form2">
+                </form>
+            </nav>
+        </div>
+    </div>
+
+    <div id="draw-main">
+        <div id="draw-canvas"></div>
+
+        <!---<div class="fixed-action-btn">
+            <button id="new-codenode-btn" class="btn btn-primary btn-circle">
+                <img src="../raw/plus.png" width="20" height="20" aria-hidden="true"/>
+            </button>
+            <div id="codenode-desc">
+                <label>Name: </label><input id="codenode-name" class="form-control">
+                <label>Parameters: </label><input id="codenode-parameters" class="form-control">
+                <label>Code:</label>
+                <textarea class="d-block" id="codenode-code" style="height:49%; width: 100%"></textarea>
+                <label>Returns: </label><input id="codenode-returns" class="form-control">
+
+                <div class="text-center center p-2">
+                    <button class="btn btn-success" id="codenode-create-btn">Create</button>
+                    <button class="btn btn-danger" id="codenode-cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>--->
+    </div>
+
+</div>

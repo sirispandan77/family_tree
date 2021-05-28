@@ -1,0 +1,13 @@
+#login,
+#signup {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../../raw/login_background.svg');
+    background-repeat: no-repeat;
+}
+
+.card {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+}
