@@ -1,3 +1,0 @@
-natsort
-pandas
-tensorflow
