@@ -9,7 +9,56 @@ let temparrow;
 let firstblock;
 let isSelected;
 let dir;
+function getConnectorPoints(from, to) {
+    const dx = to.label.attrs.x - from.label.attrs.x;
+    const dy = to.label.attrs.y - from.label.attrs.y;
+    
+    let angle = Math.atan2(-dy, dx);
 
+    const radius = 35
+
+    return [
+      from.label.attrs.x +90  -radius * Math.cos(angle + Math.PI),
+      from.label.attrs.y +21 + radius * Math.sin(angle + Math.PI),
+      to.label.attrs.x +90 -radius * Math.cos(angle),
+      to.label.attrs.y +21+ radius * Math.sin(angle),
+    ];
+  }
+function updateObjects() {
+    var dict={}, dictfrom={};
+    globaljs.graph.edges.forEach(element => {
+        dict[element.id]=element;
+        console.log("inside loop")
+        
+     });
+     console.log(dict)
+     globaljs.graph.nodes.forEach(element => {
+        dictfrom[element.id]=element;
+        console.log("inside loop")
+        
+    });
+    console.log(dictfrom)
+   // const dx = shape1.getX() ;
+    //const dy = shape1.getY() ;
+    //let angle = Math.atan2(-dy, dx);
+    const radius=20
+    console.log(" update object")
+    globaljs.graph.edges.forEach((connect) => {
+      //var line = dict[connect.id];
+      var line= globaljs.edges[connect.id];
+      console.log(line);
+      console.log(connect.toNode);
+     // console.log(dictfrom[connect.toNode]);
+      var fromNode = connect.fromNode;
+      var toNode =connect.toNode;
+      console.log(fromNode+" "+toNode);
+      const points = getConnectorPoints(
+        fromNode,
+        toNode
+      );
+      line.points(points);
+    });
+  }
 function init(){
     isSelected = false;
     temparrow = undefined;
@@ -63,6 +112,7 @@ function init(){
     
         layer.add(globaljs.nodes[i]);
     }
+    updateObjects();
     layer.draw();
     $('#draw-sidebar-left div .accordion ul li').draggable({
         cursor: 'move',
@@ -470,7 +520,7 @@ function addArrow(node1, node2, layertoadd) {
         
         let angle = Math.atan2(-dy, dx);
 
-        const radius = 10
+        const radius = 20
 
         return [
           from.label.attrs.x +90  -radius * Math.cos(angle + Math.PI),
@@ -496,7 +546,7 @@ function addArrow(node1, node2, layertoadd) {
         const dx = shape1.getX() ;
         const dy = shape1.getY() ;
         let angle = Math.atan2(-dy, dx);
-        const radius=10
+        const radius=20
         console.log(" update object")
         globaljs.graph.edges.forEach((connect) => {
           //var line = dict[connect.id];
@@ -520,7 +570,7 @@ function addArrow(node1, node2, layertoadd) {
         const dy = shape1.getY() ;
         let angle = Math.atan2(-dy, dx);
         console.log(shape1.width()+" "+shape1.height());
-        const radius = 10
+        const radius = 35
         arrow = new Konva.Line({
             points: [shape1.getX() +(shape1.width() / 2)+ -radius * Math.cos(angle + Math.PI),
             shape1.getY() + (shape1.height()/2) + radius * Math.sin(angle + Math.PI),
@@ -545,7 +595,7 @@ function addArrow(node1, node2, layertoadd) {
         shape2 = node2.label;
         const dx = shape1.getX() - shape2.getX();
         const dy = shape1.getY() - shape2.getY();
-        const radius = 10
+        const radius = 35
         let angle = Math.atan2(-dy, dx);
         arrow = new Konva.Line({
             points: [shape1.getX() +(shape1.width() / 2)+ -radius * Math.cos(angle + Math.PI),
@@ -704,7 +754,7 @@ function SavedAddArrow(node1, node2, layertoadd) {
         const dx = shape1.getX() ;
         const dy = shape1.getY() ;
         let angle = Math.atan2(-dy, dx);
-        const radius=20
+        const radius=35
         globaljs.graph.edges.forEach((connect) => {
           //var line = dict[connect.id];
           var line= globaljs.edges[connect.id];
@@ -727,7 +777,7 @@ function SavedAddArrow(node1, node2, layertoadd) {
         const dy = shape1.getY() ;
         let angle = Math.atan2(-dy, dx);
 
-        const radius = 10
+        const radius = 35
         arrow = new Konva.Line({
             points: [shape1.getX() +(shape1.width() / 2)+ -radius * Math.cos(angle + Math.PI),
                 shape1.getY() + (shape1.height()/2) + radius * Math.sin(angle + Math.PI),
@@ -752,7 +802,7 @@ function SavedAddArrow(node1, node2, layertoadd) {
         shape2 = node2.label;
         const dx = shape1.getX() - shape2.getX();
         const dy = shape1.getY() - shape2.getY();
-        const radius = 10
+        const radius = 35
         let angle = Math.atan2(-dy, dx);
         arrow = new Konva.Line({
             points: [shape1.getX() +(shape1.width() / 2)+ -radius * Math.cos(angle + Math.PI),

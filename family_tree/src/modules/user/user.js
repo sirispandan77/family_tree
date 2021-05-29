@@ -38,9 +38,9 @@ function init(){
                                 details: value,
                                 creation_time: new Date(Date.now()).toString(),
                             };
-                            //let initgraph = {"nodes":[{"id":0,"x":418,"y":122,"text":"InputLayer","parameters":{"shape":"None","batch_size":"None","name":"None","dtype":"None","sparse":"False","tensor":"None"}},{"id":1,"x":387,"y":255,"text":"Dense","parameters":{"units":1,"activation":"None","use_bias":"True","kernel_initializer":"'glorot_uniform'","bias_initializer":"'zeros'","kernel_regularizer":"None","bias_regularizer":"None","activity_regularizer":"None","kernel_constraint":"None","bias_constraint":"None"}},{"id":2,"x":352,"y":363,"text":"Output","parameters":{"optimizer":"sgd","learning_rate":0.001,"loss":"'mean_squared_error'","loss_weights":"None","sample_weight_mode":"None","weighted_metrics":"None","target_tensors":"None"}},{"id":3,"x":333,"y":462,"text":"fit","parameters":{"x":"None","y":"None","batch_size":"None","epochs":1,"verbose":0,"callbacks":"[tensorboard]","validation_split":0,"validation_data":"None","shuffle":"True","class_weight":"None","sample_weight":"None","initial_epoch":0,"steps_per_epoch":"None","validation_steps":"None"}}],"edges":[{"from":0,"to":1},{"from":1,"to":2},{"from":2,"to":3}]};
+                            //let initgraph = {"nodes":[{"id":0,"x":418,"y":122,"text":"InputLayer","parameters":{"Photo" : 'https://cdn2.iconfinder.com/data/icons/personicon-1/300/personicon11-512.png ',"shape":"None","batch_size":"None","name":"None","dtype":"None","sparse":"False","tensor":"None"}},{"id":1,"x":387,"y":255,"text":"Dense","parameters":{"units":1,"activation":"None","use_bias":"True","kernel_initializer":"'glorot_uniform'","bias_initializer":"'zeros'","kernel_regularizer":"None","bias_regularizer":"None","activity_regularizer":"None","kernel_constraint":"None","bias_constraint":"None"}},{"id":2,"x":352,"y":363,"text":"Output","parameters":{"optimizer":"sgd","learning_rate":0.001,"loss":"'mean_squared_error'","loss_weights":"None","sample_weight_mode":"None","weighted_metrics":"None","target_tensors":"None"}},{"id":3,"x":333,"y":462,"text":"fit","parameters":{"x":"None","y":"None","batch_size":"None","epochs":1,"verbose":0,"callbacks":"[tensorboard]","validation_split":0,"validation_data":"None","shuffle":"True","class_weight":"None","sample_weight":"None","initial_epoch":0,"steps_per_epoch":"None","validation_steps":"None"}}],"edges":[{"from":0,"to":1},{"from":1,"to":2},{"from":2,"to":3}]};
                             
-                            let initgraph = {"nodes":[{"id":0,"x":418,"y":122,"text":value,"privacy":false, "relation":"focus","parameters":{"Photo" : 'https://cdn2.iconfinder.com/data/icons/personicon-1/300/personicon11-512.png ', "First_name":"None","Last_name":"None", "Gender":"None" , "Alive_or_Dead": "Alive"},"relatives":[]}],"edges":[]};
+                            let initgraph = {"nodes":[{"id":0,"x":418,"y":122,"text":value,"privacy":false, "relation":"focus","parameters":{ "First_name":"None","Last_name":"None", "Gender":"None" , "Alive_or_Dead": "Alive"},"relatives":[]}],"edges":[]};
                             
 
 
@@ -54,14 +54,16 @@ function init(){
                                     swal("Create New Project", "Project created successfully.", "success");
                                 }
                             });
+                            location.reload();
                         }
                     });
                 } else {
                     swal("Error", "Project with this name already exists.", "error");
                 }
-            }
-        });
+            }           
+        });       
     });
+    
 }
 
 

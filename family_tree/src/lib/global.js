@@ -28,7 +28,7 @@ let layerParameters = {
     },
     BROTHER:{
        // Photo:'https://cdn2.iconfinder.com/data/icons/personicon-1/300/personicon11-512.png ',
-       Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/male.png',
+      // Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/male.png',
         First_name: "None",
         Last_name: "None",
         Gender: "Male",        
@@ -38,7 +38,7 @@ let layerParameters = {
     },
     SISTER:{
         //Photo:'https://cdn2.iconfinder.com/data/icons/personicon-1/300/personicon11-512.png ',
-        Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/female1.png',
+      //  Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/female1.png',
         First_name: "None",
         Last_name: "None",
         Gender: "Female",
@@ -47,7 +47,7 @@ let layerParameters = {
     },
     FATHER:{
        // Photo:'https://cdn2.iconfinder.com/data/icons/personicon-1/300/personicon11-512.png ',
-       Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/male.png',
+      // Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/male.png',
         First_name: "None",
         Last_name: "None",
         Gender: "Male",
@@ -56,7 +56,7 @@ let layerParameters = {
     },
     MOTHER:{
         //Photo:'https://cdn2.iconfinder.com/data/icons/personicon-1/300/personicon11-512.png ',
-        Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/female1.png',
+      //  Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/female1.png',
         First_name: "None",
         Last_name: "None",
         Gender: "Female",
@@ -65,7 +65,7 @@ let layerParameters = {
     },
     WIFE:{
         //Photo:'https://cdn2.iconfinder.com/data/icons/personicon-1/300/personicon11-512.png ',
-        Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/female1.png',
+       // Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/female1.png',
         First_name: "None",
         Last_name: "None",
         Gender: "Female",
@@ -74,7 +74,7 @@ let layerParameters = {
     },
     HUSBAND:{
        // Photo:'https://cdn2.iconfinder.com/data/icons/personicon-1/300/personicon11-512.png ',
-       Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/male.png',
+      // Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/male.png',
         First_name: "None",
         Last_name: "None",
         Gender: "Female",
@@ -83,7 +83,7 @@ let layerParameters = {
     },
     SON:{
         //Photo:'https://cdn2.iconfinder.com/data/icons/personicon-1/300/personicon11-512.png ',
-        Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/male.png',
+      //  Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/male.png',
         First_name: "None",
         Last_name: "None",
         Gender: "Male",
@@ -92,7 +92,7 @@ let layerParameters = {
     },
     DAUGHTER:{
        // Photo:'https://cdn2.iconfinder.com/data/icons/personicon-1/300/personicon11-512.png ',
-       Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/female1.png',
+      // Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/female1.png',
         First_name: "None",
         Last_name: "None",
         Gender: "Female",
