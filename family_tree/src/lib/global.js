@@ -77,7 +77,7 @@ let layerParameters = {
       // Photo: 'F:/tensorflow-gui-master/tensorflow-gui-master/imgs/male.png',
         First_name: "None",
         Last_name: "None",
-        Gender: "Female",
+        Gender: "Male",
         Email: "None",
         Alive_or_Dead: "Alive"
     },

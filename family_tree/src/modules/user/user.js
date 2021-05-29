@@ -54,7 +54,7 @@ function init(){
                                     swal("Create New Project", "Project created successfully.", "success");
                                 }
                             });
-                            location.reload();
+                            
                         }
                     });
                 } else {
