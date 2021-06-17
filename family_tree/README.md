@@ -51,3 +51,6 @@
     For Windows
     .\run.ps1
     ```
+
+## Final Look
+![image](https://user-images.githubusercontent.com/63141056/122449890-00451880-cfc4-11eb-9860-bb8f94a9289e.png)
